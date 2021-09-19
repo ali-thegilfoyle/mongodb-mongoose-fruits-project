@@ -2,7 +2,8 @@
 const mongoose = require("mongoose");
 
 // creating connetion with mongodb database.
-mongoose.connect("mongodb://localhost:27017/fruitsDB", {
+//! Add the database collection name at the end of this link
+mongoose.connect("mongodb://localhost:27017/your database name here", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -91,7 +92,8 @@ Fruit.find(function (error, fruits) {
 
 // update the fruit model data.
 Fruit.updateOne(
-  { _id: "6038096d6a82821df89b87d6" },
+  //! add the collection id here.
+  { _id: "collection id here" },
   { name: "Peach" },
   function (error) {
     if (error) {
@@ -103,7 +105,8 @@ Fruit.updateOne(
 );
 
 // delete the data from fruit mode.
-Fruit.deleteOne({ _id: "6038096d6a82821df89b87d5" }, function (error) {
+//! add the collectiono id here.
+Fruit.deleteOne({ _id: "collection id here" }, function (error) {
   if (error) {
     console.log(error);
   } else {
